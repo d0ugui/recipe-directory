@@ -11,12 +11,12 @@ import './App.css';
 import { SingleCard } from './components/SingleCard';
 
 const cardImages = [
-  { src: Helmet },
-  { src: Potion },
-  { src: Ring },
-  { src: Scroll },
-  { src: Shield },
-  { src: Sword }
+  { src: Helmet, matched: false },
+  { src: Potion, matched: false },
+  { src: Ring, matched: false },
+  { src: Scroll, matched: false },
+  { src: Shield, matched: false },
+  { src: Sword, matched: false }
 ];
 
 function App() {
@@ -44,10 +44,18 @@ function App() {
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       if (choiceOne.src === choiceTwo.src) {
-        console.log('those cards match')
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.src === choiceOne.src) {
+              return {...card, matched: true}
+            } else {
+              return card
+            }
+          })
+        })
         resetTurn();
       } else {
-        console.log('those cards do not match');
+        
         resetTurn();
       }
     }
