@@ -3,10 +3,12 @@ import React from 'react';
 import BackCard from '../../img/cover.png';
 import './styles.css';
 
-export function SingleCard({ card, handleChoice, flipped }) {
+export function SingleCard({ card, handleChoice, flipped, disabled }) {
 
   function handleClick() {
-    handleChoice(card)
+    if (!disabled) {
+      handleChoice(card)
+    }
   }
 
   return (
