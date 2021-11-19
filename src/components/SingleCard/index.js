@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import BackCard from '../../img/cover.png';
 import './styles.css';
 
 export function SingleCard({ card, handleChoice, flipped, disabled }) {
+  const [clicked, setClicked] = useState(false);
 
   function handleClick() {
-    if (!disabled) {
+    setClicked(true);
+    if (!disabled && !clicked) {
       handleChoice(card)
     }
+
+    setTimeout(() => setClicked(false), 500);
   }
 
   return (
