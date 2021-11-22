@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Home } from './pages/home';
-import { Create } from './pages/create';
-import { Search } from './pages/search';
-import { Recipe } from './pages/recipe';
+import { Home } from './pages/Home';
+import { Create } from './pages/Create';
+import { Search } from './pages/Search';
+import { Recipe } from './pages/Recipe';
+import { Navbar } from './components/Navbar';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
