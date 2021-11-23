@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Home } from './pages/Home';
-import { Create } from './pages/Create';
-import { Search } from './pages/Search';
-import { Recipe } from './pages/Recipe';
-import { Navbar } from './components/Navbar';
+import { Home } from "./pages/Home";
+import { Create } from "./pages/Create";
+import { Search } from "./pages/Search";
+import { Recipe } from "./pages/Recipe";
+import { Navbar } from "./components/Navbar";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
