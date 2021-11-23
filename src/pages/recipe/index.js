@@ -6,14 +6,24 @@ import "./styles.css";
 export function Recipe() {
   const { id } = useParams();
   const url = "http://localhost:3000/recipes/" + id;
-  const { data, isPending, error } = useFetch(url);
+  const { data: recipe, isPending, error } = useFetch(url);
 
   return (
     <div className="recipe">
       {error && <p className="error">{error}</p>}
       {isPending && <p className="loading">Loading...</p>}
-      {data && <h1>{data.title}</h1>}
-      {console.log("oii")}
+      {recipe && (
+        <>
+          <h2 className="page-title">{recipe.title}</h2>
+          <p>Takes {recipe.cookingTime} to cook.</p>
+          <ul>
+            {recipe.ingredients.map(ing => (
+              <li key={ing}>{ing}</li>
+            ))}
+          </ul>
+          <p className="method">{recipe.method}</p>
+        </>
+      )}
     </div>
   );
 }
