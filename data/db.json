@@ -38,25 +38,14 @@
       "cookingTime": "35 minutes"
     },
     {
-      "title": "asdas",
+      "title": "veggie pizza",
       "ingredients": [
-        "dasd"
+        "item",
+        "item 1"
       ],
-      "method": "dasdasd",
-      "cookingTime": "23 minutes",
-      "id": "D5iOiHo"
-    },
-    {
-      "title": "asdas",
-      "ingredients": [
-        "asd",
-        "sd",
-        "as",
-        "d"
-      ],
-      "method": "asdasdas",
-      "cookingTime": "45 minutes",
-      "id": "NmDXHZh"
+      "method": "....",
+      "cookingTime": "35 minutes",
+      "id": "dWYHB_m"
     }
   ]
 }
