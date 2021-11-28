@@ -5,6 +5,7 @@ import { Create } from "./pages/Create";
 import { Search } from "./pages/Search";
 import { Recipe } from "./pages/Recipe";
 import { Navbar } from "./components/Navbar";
+import { ThemeSelector } from "./components/ThemeSelector";
 
 import "./App.css";
 
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <ThemeSelector />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
