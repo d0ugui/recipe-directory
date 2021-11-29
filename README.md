@@ -24,8 +24,11 @@ $ cd recipe-directory
 Para iniciá-lo, siga os passos abaixo:
 
 ```bash
-# Rodando o back-end (o JSON precisa ser instalado globalmente)
-json-server --watch ./data/db.json
+# O JSON precisa ser instalado globalmente
+$ npm install -g json-server
+
+# Rodando o back-end
+$ json-server --watch ./data/db.json
 
 # Instalar as dependências
 $ yarn or npm
