@@ -11,6 +11,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
 - [React](https://reactjs.org)
 - [Styled-components](https://v5.reactrouter.com/web/guides/quick-start)
 - [JSON Server](https://github.com/typicode/json-server)
+- [Firebase](https://firebase.google.com/?hl=pt)
 
 ## 🚀 Como executar
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { projectFirestore } from "../../firebase/config";
 
+import { projectFirestore } from "../../firebase/config";
 import { RecipeList } from "../../components/RecipeList";
 
 import "./styles.css";
@@ -15,7 +15,7 @@ export function Home() {
 
     projectFirestore.collection('recipes').get().then((snapshot) => {
       if (snapshot.empty) {
-        setError('No recipes do load');
+        setError('No recipes to load');
         setIsPending(false);
       } else {
         let results = [];
