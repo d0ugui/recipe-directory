@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router';
 import { projectFirestore } from '../../firebase/config';
 
@@ -13,8 +13,6 @@ export function Create() {
   const [ingredients, setIngredients] = useState([]);
   const ingredientsInput = useRef(null);
   const navigate = useNavigate();
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
